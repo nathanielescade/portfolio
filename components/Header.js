@@ -1,12 +1,16 @@
 // components/Header.js
 import { useState } from 'react'
-import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa'
+import { FaBars, FaTimes, FaSun, FaMoon, FaFileAlt } from 'react-icons/fa'
 
 export default function Header({ toggleTheme, theme }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
+  }
+
+  const closeMenu = () => {
+    setMenuOpen(false)
   }
 
   return (
@@ -17,10 +21,13 @@ export default function Header({ toggleTheme, theme }) {
         </div>
         
         <div className="hidden md:flex space-x-8">
-          <a href="#home" className="hover:text-cyan-400 transition-colors">Home</a>
-          <a href="#projects" className="hover:text-cyan-400 transition-colors">Projects</a>
-          <a href="#skills" className="hover:text-cyan-400 transition-colors">Skills</a>
-          <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a>
+          <a href="#home" className="hover:text-cyan-400 transition-colors" onClick={closeMenu}>Home</a>
+          <a href="#projects" className="hover:text-cyan-400 transition-colors" onClick={closeMenu}>Projects</a>
+          <a href="#skills" className="hover:text-cyan-400 transition-colors" onClick={closeMenu}>Skills</a>
+          <a href="#contact" className="hover:text-cyan-400 transition-colors" onClick={closeMenu}>Contact</a>
+          <a href="/resume" className="hover:text-cyan-400 transition-colors flex items-center">
+            <FaFileAlt className="mr-1" /> Resume
+          </a>
         </div>
         
         <div className="flex items-center space-x-4">
@@ -46,10 +53,13 @@ export default function Header({ toggleTheme, theme }) {
       {menuOpen && (
         <div className="md:hidden bg-black/90 backdrop-blur-sm border-t border-gray-800">
           <div className="container mx-auto px-4 py-3 flex flex-col space-y-3">
-            <a href="#home" className="hover:text-cyan-400 transition-colors" onClick={toggleMenu}>Home</a>
-            <a href="#projects" className="hover:text-cyan-400 transition-colors" onClick={toggleMenu}>Projects</a>
-            <a href="#skills" className="hover:text-cyan-400 transition-colors" onClick={toggleMenu}>Skills</a>
-            <a href="#contact" className="hover:text-cyan-400 transition-colors" onClick={toggleMenu}>Contact</a>
+            <a href="#home" className="hover:text-cyan-400 transition-colors" onClick={closeMenu}>Home</a>
+            <a href="#projects" className="hover:text-cyan-400 transition-colors" onClick={closeMenu}>Projects</a>
+            <a href="#skills" className="hover:text-cyan-400 transition-colors" onClick={closeMenu}>Skills</a>
+            <a href="#contact" className="hover:text-cyan-400 transition-colors" onClick={closeMenu}>Contact</a>
+            <a href="/resume" className="hover:text-cyan-400 transition-colors flex items-center" onClick={closeMenu}>
+              <FaFileAlt className="mr-1" /> Resume
+            </a>
           </div>
         </div>
       )}

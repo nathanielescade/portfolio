@@ -1,6 +1,6 @@
 // components/Contact.js
 import { useState } from 'react'
-import { FaEnvelope, FaWhatsapp, FaGithub, FaLinkedin, FaTwitter, FaMapMarkerAlt, FaPaperPlane, FaFacebookF } from 'react-icons/fa'
+import { FaEnvelope, FaWhatsapp, FaGithub, FaLinkedin, FaTwitter, FaMapMarkerAlt, FaPaperPlane, FaFacebookF, FaFacebook, FaFileAlt } from 'react-icons/fa'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,7 +12,8 @@ export default function Contact() {
   
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState(null)
-
+  const [senderName, setSenderName] = useState('') // Store the sender's name for personalization
+  
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -21,38 +22,43 @@ export default function Contact() {
     }))
   }
 
-// components/Contact.js (updated handleSubmit function)
-
-const handleSubmit = async (e) => {
-  e.preventDefault()
-  setIsSubmitting(true)
-  
-  try {
-    const response = await fetch('https://formspree.io/f/mleqkadn', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
     
-    if (response.ok) {
+    // Store the sender's name before resetting the form
+    setSenderName(formData.name)
+    
+    try {
+      const response = await fetch('https://formspree.io/f/mleqkadn', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      
+      if (response.ok) {
+        setIsSubmitting(false)
+        // Personalized success message
+        setSubmitMessage({ 
+          type: 'success', 
+          text: `Thank you for your message, ${formData.name}! I've received it and will get back to you as soon as possible.` 
+        })
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
       setIsSubmitting(false)
-      setSubmitMessage({ type: 'success', text: 'Your message has been sent successfully!' })
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    } else {
-      throw new Error('Form submission failed')
+      setSubmitMessage({ type: 'error', text: 'There was an error sending your message. Please try again.' })
     }
-  } catch (error) {
-    setIsSubmitting(false)
-    setSubmitMessage({ type: 'error', text: 'There was an error sending your message. Please try again.' })
+    
+    // Reset message after 5 seconds
+    setTimeout(() => {
+      setSubmitMessage(null)
+    }, 5000)
   }
-  
-  // Reset message after 5 seconds
-  setTimeout(() => {
-    setSubmitMessage(null)
-  }, 5000)
-}
 
   return (
     <section id="contact" className="py-20">
@@ -72,8 +78,22 @@ const handleSubmit = async (e) => {
             <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
             
             {submitMessage && (
-              <div className={`mb-6 p-4 rounded-lg ${submitMessage.type === 'success' ? 'bg-green-900/30 text-green-400' : 'bg-red-900/30 text-red-400'}`}>
-                {submitMessage.text}
+              <div className={`mb-6 p-4 rounded-lg flex items-start ${submitMessage.type === 'success' ? 'bg-green-900/30 text-green-400' : 'bg-red-900/30 text-red-400'}`}>
+                {submitMessage.type === 'success' ? (
+                  <>
+                    <svg className="w-6 h-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>{submitMessage.text}</span>
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-6 h-6 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                    <span>{submitMessage.text}</span>
+                  </>
+                )}
               </div>
             )}
             
@@ -223,17 +243,32 @@ const handleSubmit = async (e) => {
                 <a href="https://twitter.com/nathanielescade" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
                   <FaTwitter className="text-xl text-cyan-400" />
                 </a>
+                <a href="https://facebook.com/nathanielescade" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
+                  <FaFacebookF className="text-xl text-cyan-400" />
+                </a>
               </div>
               
+
               <div className="mt-8">
                 <h4 className="font-bold mb-2">Download my resume</h4>
-                <a 
-                  href="/resume.pdf" 
-                  className="inline-flex items-center px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors"
-                  download
-                >
-                  <span>Resume.pdf</span>
-                </a>
+                <div className="flex space-x-4">
+                  <a 
+                    href="/resume" 
+                    className="inline-flex items-center px-4 py-2 rounded-lg neon-button text-white font-semibold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaFileAlt className="mr-2" />
+                    <span>View Online</span>
+                  </a>
+                  <a 
+                    href="/resume.pdf" 
+                    className="inline-flex items-center px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors"
+                    download
+                  >
+                    <span>Download PDF</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

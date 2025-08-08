@@ -1,5 +1,5 @@
+// components/ContactForm.js
 'use client'
-
 import { useState } from 'react';
 import { FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 
@@ -28,7 +28,7 @@ const ContactForm = () => {
         <div>
           <h3 className="text-2xl font-bold mb-6 neon-text">Get In Touch</h3>
           <p className="mb-6">
-            Feel free to reach out to me for any questions or opportunities. I'm always open to discussing new projects and ideas.
+            Feel free to reach out to me for any questions or opportunities. I&apos;m always open to discussing new projects and ideas.
           </p>
           
           <div className="space-y-4">
