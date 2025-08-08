@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* Base styles */
+:root {
+  --neon-blue: #00d9ff;
+  --neon-pink: #ff10f0;
+  --neon-green: #39ff14;
+  --neon-yellow: #ffff33;
+  --dark-blue: #0f172a;
+  --darker-blue: #020617;
+}
+
+/* Dark blue gradient theme */
+body {
+  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--darker-blue) 100%);
+  color: white;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Subtle dots pattern */
+.dots-pattern {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Neon glow effects */
+.neon-glow {
+  box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue), 0 0 20px var(--neon-blue);
+}
+
+.neon-text {
+  text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue), 0 0 20px var(--neon-blue);
+}
+
+.neon-border {
+  border: 1px solid var(--neon-blue);
+  box-shadow: 0 0 5px var(--neon-blue), inset 0 0 5px var(--neon-blue);
+}
+
+/* Black and white theme */
+body.black-and-white {
+  background: #000;
+  color: #fff;
+}
+
+body.black-and-white .neon-glow {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+}
+
+body.black-and-white .neon-text {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+}
+
+body.black-and-white .neon-border {
+  border: 1px solid #fff;
+  box-shadow: 0 0 5px #fff, inset 0 0 5px #fff;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--darker-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-pink);
+}
