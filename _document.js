@@ -1,24 +1,20 @@
-import Document from 'next/document';
-import { Html, Head, Main, NextScript } from 'next/document';
+// pages/_document.js
+import { Html, Head, Main, NextScript } from 'next/document'
 
-class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="en">
-        <Head>
-          <meta name="theme-color" content="#0f172a" />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+export default function Document() {
+  return (
+    <Html lang="en">
+      <Head>
+        <meta name="theme-color" content="#0f172a" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
 }
-
-export default MyDocument;

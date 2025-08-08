@@ -1,26 +1,34 @@
 // components/ProjectCard.js
+'use client'
+
+import { useState } from 'react'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import Image from 'next/image'
 
 export default function ProjectCard({ project, featured }) {
+  const [imageError, setImageError] = useState(false)
+
+  const handleImageError = () => {
+    setImageError(true)
+  }
+
   return (
     <div className={`neon-card rounded-xl overflow-hidden ${featured ? 'h-full' : ''}`}>
       <div className={`relative ${featured ? 'h-64 md:h-80' : 'h-48'} overflow-hidden`}>
-        {/* Updated to properly display images */}
-        <img 
-          src={project.image} 
-          alt={project.title}
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            // Fallback if image fails to load
-            e.target.onerror = null;
-            e.target.style.display = 'none';
-            e.target.parentNode.innerHTML = `
-              <div class="w-full h-full bg-gradient-to-br from-blue-900/30 to-purple-900/30 flex items-center justify-center">
-                <span class="text-4xl font-bold text-white/20">${project.title.charAt(0)}</span>
-              </div>
-            `;
-          }}
-        />
+        {imageError ? (
+          <div className="w-full h-full bg-gradient-to-br from-blue-900/30 to-purple-900/30 flex items-center justify-center">
+            <span className="text-4xl font-bold text-white/20">{project.title.charAt(0)}</span>
+          </div>
+        ) : (
+          <Image 
+            src={project.image} 
+            alt={project.title}
+            width={featured ? 640 : 480}
+            height={featured ? 480 : 320}
+            className="w-full h-full object-cover"
+            onError={handleImageError}
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
         <div className="absolute bottom-4 left-4 right-4">
           <h3 className="text-xl font-bold">{project.title}</h3>

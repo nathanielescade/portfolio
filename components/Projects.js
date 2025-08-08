@@ -1,5 +1,5 @@
 // components/Projects.js
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import ProjectCard from './ProjectCard'
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa'
 
@@ -89,7 +89,7 @@ export default function Projects() {
       id: 9,
       title: "FinTrack Pro",
       description: "A comprehensive personal finance management application with transaction tracking, financial analytics, and goal setting.",
-      image: "/images/fintrack.jpg", // Placeholder
+      image: "/images/fintrack-pro.jpg", // Placeholder
       tags: ["HTML", "CSS", "JavaScript", "Chart.js"],
       githubUrl: "https://github.com/nathanielescade/FinTrack-Pro",
       liveUrl: "https://fin-track-pro-three.vercel.app/",
@@ -107,7 +107,7 @@ export default function Projects() {
     },
     {
       id: 11,
-      title: "Mobile Phone",
+      title: "Escade Mobile",
       description: "A mobile phone interface built with React featuring a modern design and interactive components.",
       image: "/images/escade-mobile.jpg", // Placeholder
       tags: ["React", "JavaScript", "CSS", "Mobile UI"],
@@ -124,20 +124,20 @@ export default function Projects() {
     setFeaturedProjects(projects.filter(project => project.featured))
   }, [projects])
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === featuredProjects.length - 1 ? 0 : prev + 1))
-  }
+  }, [featuredProjects.length])
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === 0 ? featuredProjects.length - 1 : prev - 1))
-  }
+  }, [featuredProjects.length])
 
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide()
     }, 5000)
     return () => clearInterval(interval)
-  }, [featuredProjects.length])
+  }, [nextSlide])
 
   return (
     <section id="projects" className="py-20">

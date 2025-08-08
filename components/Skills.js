@@ -34,7 +34,7 @@ export default function Skills() {
   const filteredSkills = activeCategory === 'all' 
     ? skills 
     : skills.filter(skill => skill.category === activeCategory)
-
+  
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
@@ -44,7 +44,7 @@ export default function Skills() {
           </span>
         </h2>
         <p className="text-gray-400 mb-12 text-center max-w-2xl mx-auto">
-          I've worked with a variety of technologies in the web development world. Here's an overview of my technical skills.
+          I&apos;ve worked with a variety of technologies in the web development world. Here&apos;s an overview of my technical skills.
         </p>
         
         <div className="flex flex-wrap justify-center gap-4 mb-12">
