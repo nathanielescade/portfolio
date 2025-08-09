@@ -237,7 +237,7 @@ export default function Contact() {
                 <a href="https://github.com/nathanielescade" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
                   <FaGithub className="text-xl" />
                 </a>
-                <a href="https://www.linkedin.com/in/nathaniel-cobbinah/" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
+                <a href="https://www.linkedin.com/in/nathanielescade/" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
                   <FaLinkedin className="text-xl text-blue-400" />
                 </a>
                  {/* <a href="https://wa.me/233200209205" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
