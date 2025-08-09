@@ -70,7 +70,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript", "Chart.js"],
     liveUrl: "https://fin-track-pro-three.vercel.app/",
     githubUrl: "https://github.com/nathanielescade/FinTrack-Pro",
-    image: "/images/financial-tracker.jpg"
+    image: "/images/fintrack.jpg"
   },
   {
     id: 9,

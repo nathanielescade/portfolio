@@ -4,6 +4,7 @@
 import { useState } from 'react'
 import { FaGithub, FaExternalLinkAlt, FaEnvelope, FaWhatsapp, FaLinkedin, FaMapMarkerAlt, FaFacebookF } from 'react-icons/fa'
 import Head from 'next/head'
+import Image from 'next/image'
 
 export default function Resume() {
   const [imageError, setImageError] = useState(false)
@@ -39,9 +40,11 @@ export default function Resume() {
                       <span className="text-4xl font-bold text-gray-500">NC</span>
                     </div>
                   ) : (
-                    <img 
+                    <Image 
                       src="/images/profile-picture.jpg" 
                       alt="Nathaniel Cobbinah" 
+                      width={128}
+                      height={128}
                       className="w-full h-full object-cover"
                       onError={handleImageError}
                     />
@@ -57,9 +60,9 @@ export default function Resume() {
                     <FaEnvelope className="mr-2" />
                     nathanielescade@gmail.com
                   </a>
-                  <a href="https://wa.me/233593609043" className="flex items-center text-blue-200 hover:text-white">
+                  <a href="https://wa.me/233200209205" className="flex items-center text-blue-200 hover:text-white">
                     <FaWhatsapp className="mr-2" />
-                    +233 59 360 9043
+                    +233 20 020 9205
                   </a>
                   <a href="https://www.linkedin.com/in/nathaniel-cobbinah/" className="flex items-center text-blue-200 hover:text-white">
                     <FaLinkedin className="mr-2" />
@@ -123,7 +126,7 @@ export default function Resume() {
                       <a href="https://github.com/nathanielescade/hotel-dashboard" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaGithub />
                       </a>
-                      <a href="https://hotel-dashboard-orcin.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                      <a href="https://hoteldashboard-pi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaExternalLinkAlt />
                       </a>
                     </div>
@@ -144,14 +147,14 @@ export default function Resume() {
                       <a href="https://github.com/nathanielescade/social-media" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaGithub />
                       </a>
-                      <a href="https://social-media-zeta-sandy.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                      <a href="https://neonsocial.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaExternalLinkAlt />
                       </a>
                     </div>
                   </div>
                   <p className="text-gray-600 mt-2">
                     A vibrant social media platform with a modern neon theme, featuring user profiles, post creation, 
-                    real-time notifications, and social interactions. Built with Next.js and styled with Tailwind CSS.
+                     notifications, and social interactions. Built with Next.js and styled with Tailwind CSS.
                   </p>
                 </div>
                 {/* CouponHub */}
@@ -176,7 +179,7 @@ export default function Resume() {
                 <div className="border-l-4 border-red-500 pl-4">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h4 className="font-bold text-lg text-gray-800">Ghana Police Management System</h4>
+                      <h4 className="font-bold text-lg text-gray-800">Police Management System</h4>
                       <p className="text-gray-600 italic">HTML, CSS, JavaScript</p>
                     </div>
                     <div className="flex space-x-2">
@@ -189,7 +192,7 @@ export default function Resume() {
                     </div>
                   </div>
                   <p className="text-gray-600 mt-2">
-                    A modern frontend for the Ghana Police Management System providing tools for managing police operations, 
+                    A modern frontend for the Police Management System providing tools for managing police operations, 
                     officers, cases, fleet, reports, and public engagement. Features responsive design and role-based access controls.
                   </p>
                 </div>
@@ -204,7 +207,7 @@ export default function Resume() {
                       <a href="https://github.com/nathanielescade/weather-forecast" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaGithub />
                       </a>
-                      <a href="https://weather-forecast-jet-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                      <a href="https://weatherforecast-mu-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaExternalLinkAlt />
                       </a>
                     </div>
@@ -226,7 +229,7 @@ export default function Resume() {
                       <a href="https://github.com/nathanielescade/spiritual-bible" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaGithub />
                       </a>
-                      <a href="https://bible-psi-five.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                      <a href="https://spiritualbible.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaExternalLinkAlt />
                       </a>
                     </div>
@@ -247,13 +250,13 @@ export default function Resume() {
                       <a href="https://github.com/nathanielescade/travel-app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaGithub />
                       </a>
-                      <a href="https://travel-app-khaki-phi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                      <a href="https://travelapp-three-chi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaExternalLinkAlt />
                       </a>
                     </div>
                   </div>
                   <p className="text-gray-600 mt-2">
-                    A modern travel booking web application for exploring and planning trips to Ghana. Features an AI travel 
+                    A modern travel booking web application for exploring and planning trips to Ghana. Features a demo AI travel 
                     assistant, hotel booking, destination explorer, travel guide, and experience booking with a responsive design.
                   </p>
                 </div>
@@ -289,7 +292,7 @@ export default function Resume() {
                       <a href="https://github.com/nathanielescade/FinTrack-Pro" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaGithub />
                       </a>
-                      <a href="https://fin-track-pro-three.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                      <a href="https://fintrackpro-nine.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaExternalLinkAlt />
                       </a>
                     </div>
@@ -310,7 +313,7 @@ export default function Resume() {
                       <a href="https://github.com/nathanielescade/tech-news" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaGithub />
                       </a>
-                      <a href="https://news-orcin-five.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                      <a href="https://technews-rust.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         <FaExternalLinkAlt />
                       </a>
                     </div>
@@ -348,7 +351,7 @@ export default function Resume() {
               <h3 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Education</h3>
               <div className="border-l-4 border-blue-500 pl-4">
                 <h4 className="font-bold text-gray-800">Accra Technical University</h4>
-                <p className="text-gray-600 italic">2018 - 2021</p>
+                {/* <p className="text-gray-600 italic">2018 - 2021</p> */}
               </div>
             </div>
             {/* Footer */}

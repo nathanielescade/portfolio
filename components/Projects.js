@@ -12,7 +12,7 @@ export default function Projects() {
       image: "/images/hotel-dashboard.jpg", // Placeholder
       tags: ["Next.js", "Tailwind CSS", "Chart.js", "React"],
       githubUrl: "https://github.com/nathanielescade/hotel-dashboard",
-      liveUrl: "https://hotel-dashboard-orcin.vercel.app/",
+      liveUrl: "https://hoteldashboard-pi.vercel.app/",
       featured: true
     },
     {
@@ -22,7 +22,7 @@ export default function Projects() {
       image: "/images/neon-social.jpg", // Placeholder
       tags: ["Next.js", "Tailwind CSS", "React", "Framer Motion"],
       githubUrl: "https://github.com/nathanielescade/social-media",
-      liveUrl: "https://social-media-zeta-sandy.vercel.app/",
+      liveUrl: "https://neonsocial.vercel.app/",
       featured: true
     },
     {
@@ -52,7 +52,7 @@ export default function Projects() {
       image: "/images/weather-forecast.jpg", // Placeholder
       tags: ["HTML", "CSS", "JavaScript", "Weather API"],
       githubUrl: "https://github.com/nathanielescade/weather-forecast",
-      liveUrl: "https://weather-forecast-jet-gamma.vercel.app/",
+      liveUrl: "https://weatherforecast-mu-two.vercel.app/",
       featured: false
     },
     {
@@ -62,7 +62,7 @@ export default function Projects() {
       image: "/images/spiritual-bible.jpg", // Placeholder
       tags: ["HTML", "CSS", "JavaScript", "Bible API"],
       githubUrl: "https://github.com/nathanielescade/spiritual-bible",
-      liveUrl: "https://bible-psi-five.vercel.app/",
+      liveUrl: "https://spiritualbible.vercel.app/",
       featured: false
     },
     {
@@ -72,7 +72,7 @@ export default function Projects() {
       image: "/images/travel-app.jpg", // Placeholder
       tags: ["HTML", "CSS", "JavaScript", "Travel API"],
       githubUrl: "https://github.com/nathanielescade/travel-app",
-      liveUrl: "https://travel-app-khaki-phi.vercel.app/",
+      liveUrl: "https://travelapp-three-chi.vercel.app/",
       featured: false
     },
     {
@@ -89,10 +89,10 @@ export default function Projects() {
       id: 9,
       title: "FinTrack Pro",
       description: "A comprehensive personal finance management application with transaction tracking, financial analytics, and goal setting.",
-      image: "/images/fintrack-pro.jpg", // Placeholder
+      image: "/images/fintrack.jpg", // Placeholder
       tags: ["HTML", "CSS", "JavaScript", "Chart.js"],
       githubUrl: "https://github.com/nathanielescade/FinTrack-Pro",
-      liveUrl: "https://fin-track-pro-three.vercel.app/",
+      liveUrl: "https://fintrackpro-nine.vercel.app/",
       featured: false
     },
     {
@@ -102,7 +102,7 @@ export default function Projects() {
       image: "/images/tech-news.jpg", // Placeholder
       tags: ["HTML", "CSS", "JavaScript", "News API"],
       githubUrl: "https://github.com/nathanielescade/tech-news",
-      liveUrl: "https://news-orcin-five.vercel.app/",
+      liveUrl: "https://technews-rust.vercel.app/",
       featured: false
     },
     {

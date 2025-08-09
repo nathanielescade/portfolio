@@ -201,8 +201,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">WhatsApp</h4>
-                    <a href="https://wa.me/233593609043" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
-                      +233 59 360 9043
+                    <a href="https://wa.me/233200209205" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
+                      +233 20 020 9205
                     </a>
                   </div>
                 </div>
@@ -240,8 +240,11 @@ export default function Contact() {
                 <a href="https://www.linkedin.com/in/nathaniel-cobbinah/" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
                   <FaLinkedin className="text-xl text-blue-400" />
                 </a>
-                <a href="https://twitter.com/nathanielescade" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
-                  <FaTwitter className="text-xl text-cyan-400" />
+                 {/* <a href="https://wa.me/233200209205" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
+                    <FaWhatsapp className="text-xl text-green-400" />
+                </a> */}
+                <a href="mailto:nathanielescade@gmail.com" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
+                    <FaEnvelope className="text-xl text-red-400" />
                 </a>
                 <a href="https://facebook.com/nathanielescade" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
                   <FaFacebookF className="text-xl text-cyan-400" />

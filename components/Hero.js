@@ -93,10 +93,10 @@ export default function Hero() {
             <a href="https://facebook.com/nathanielescade" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
               <FaFacebookF className="text-xl text-blue-600" />
             </a>
-            <a href="https://twitter.com/nathanielescade" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
+            {/* <a href="https://twitter.com/nathanielescade" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
               <FaTwitter className="text-xl text-cyan-400" />
-            </a>
-            <a href="https://wa.me/233593609043" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
+            </a> */}
+            <a href="https://wa.me/233200209205" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
               <FaWhatsapp className="text-xl text-green-400" />
             </a>
             <a href="mailto:nathanielescade@gmail.com" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">
