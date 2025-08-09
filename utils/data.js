@@ -4,7 +4,7 @@ export const projects = [
     title: "Hotel Management System Admin Dashboard",
     description: "A stunning neon-themed hotel management system admin dashboard built with Next.js, Tailwind CSS, and Chart.js.",
     technologies: ["Next.js", "Tailwind CSS", "Chart.js", "React"],
-    liveUrl: "https://hotel-dashboard-orcin.vercel.app/",
+    liveUrl: "https://hoteldashboard-pi.vercel.app/",
     githubUrl: "https://github.com/nathanielescade/hotel-dashboard.git",
     featured: true,
     image: "/images/hotel-dashboard.jpg"
@@ -14,7 +14,7 @@ export const projects = [
     title: "Neon Social - Vibrant Social Network",
     description: "A colorful, modern social media platform built with Next.js, featuring a vibrant neon theme and fully functional social features.",
     technologies: ["Next.js", "Tailwind CSS", "React", "Framer Motion"],
-    liveUrl: "https://social-media-zeta-sandy.vercel.app/",
+    liveUrl: "https://neonsocial.vercel.app/",
     githubUrl: "https://github.com/nathanielescade/social-media.git",
     image: "/images/social-media.jpg"
   },
@@ -32,7 +32,7 @@ export const projects = [
     title: "Weather Forecast App",
     description: "A visually stunning weather forecast application with a cyberpunk aesthetic that provides real-time weather information.",
     technologies: ["HTML", "CSS", "JavaScript", "Weather API"],
-    liveUrl: "https://weather-forecast-jet-gamma.vercel.app/",
+    liveUrl: "https://weatherforecast-mu-two.vercel.app/",
     githubUrl: "https://github.com/nathanielescade/weather-forecast",
     image: "/images/weather-forecast.jpg"
   },
@@ -41,7 +41,7 @@ export const projects = [
     title: "The Spiritual Bible",
     description: "A serene, responsive digital sanctuary for scripture reading, reflection, and spiritual growth.",
     technologies: ["HTML", "CSS", "JavaScript", "Bible API"],
-    liveUrl: "https://bible-psi-five.vercel.app/",
+    liveUrl: "https://spiritualbible.vercel.app/",
     githubUrl: "https://github.com/nathanielescade/spiritual-bible",
     image: "/images/bible-app.jpg"
   },
@@ -50,7 +50,7 @@ export const projects = [
     title: "Travel App",
     description: "A modern, modular travel booking web application for exploring and planning trips to Ghana.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    liveUrl: "https://travel-app-khaki-phi.vercel.app/",
+    liveUrl: "https://travelapp-three-chi.vercel.app/",
     githubUrl: "https://github.com/nathanielescade/travel-app",
     image: "/images/travel-app.jpg"
   },
@@ -68,7 +68,7 @@ export const projects = [
     title: "FinTrack Pro",
     description: "A comprehensive personal finance management application that helps you track expenses, manage budgets, and set financial goals.",
     technologies: ["HTML", "CSS", "JavaScript", "Chart.js"],
-    liveUrl: "https://fin-track-pro-three.vercel.app/",
+    liveUrl: "https://fintrackpro-nine.vercel.app/",
     githubUrl: "https://github.com/nathanielescade/FinTrack-Pro",
     image: "/images/fintrack.jpg"
   },
@@ -77,7 +77,7 @@ export const projects = [
     title: "Crazy Tech News",
     description: "A modern, responsive tech news website that delivers the latest technology news, AI breakthroughs, and tech innovations.",
     technologies: ["HTML", "CSS", "JavaScript", "News API"],
-    liveUrl: "https://news-orcin-five.vercel.app/",
+    liveUrl: "https://technews-rust.vercel.app/",
     githubUrl: "https://github.com/nathanielescade/tech-news",
     image: "/images/tech-news.jpg"
   },

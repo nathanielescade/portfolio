@@ -64,7 +64,7 @@ export default function Resume() {
                     <FaWhatsapp className="mr-2" />
                     +233 20 020 9205
                   </a>
-                  <a href="https://www.linkedin.com/in/nathaniel-cobbinah/" className="flex items-center text-blue-200 hover:text-white">
+                  <a href="https://www.linkedin.com/in/nathanielescade/" className="flex items-center text-blue-200 hover:text-white">
                     <FaLinkedin className="mr-2" />
                     LinkedIn
                   </a>
